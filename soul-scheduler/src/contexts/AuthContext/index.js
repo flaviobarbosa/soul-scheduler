@@ -8,10 +8,11 @@ export const AuthProvider = ({children}) => {
 
   const [user, setUser] = useState();
 
-  const signIn = () => {
+  const signIn = (email, password) => {
     setUser({
       name: "Zeca",
-      id: 1,
+      id: new Date().getTime(),
+      email: email,
     });
 
     history.push("/appointments");

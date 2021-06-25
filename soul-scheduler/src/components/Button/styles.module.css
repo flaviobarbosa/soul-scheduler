@@ -1,0 +1,19 @@
+.button {
+  background: var(--purple);
+  color: var(--white);
+  border-radius: 8px;
+  height: 3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 500;
+  cursor: pointer;
+
+  transition: filter 0.3s;
+}
+
+.button:hover {
+  filter: brightness(80%);
+}
