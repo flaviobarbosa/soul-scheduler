@@ -1,4 +1,6 @@
 import {Route, Switch, Redirect} from "react-router-dom";
+import {Appointments} from "./components/Appointments";
+import {Panel} from "./components/Panel";
 import {useAuth} from "./hooks/useAuth";
 import {Login} from "./pages/Login";
 
@@ -17,15 +19,24 @@ const PrivateRoute = ({component: Component, user, ...rest}) => (
 
 const Home = () => <h1>user authenticated</h1>;
 
-export const Routes = () => {
+const PrivateRoutes = () => {
   const {user} = useAuth();
 
   return (
-    <Switch>
+    <Panel>
       <PrivateRoute path="/" exact component={Home} user={user} />
+      <PrivateRoute path="/appointments" component={Appointments} user={user} />
+    </Panel>
+  );
+};
+
+export const Routes = () => {
+  return (
+    <Switch>
       <Route path="/login">
         <Login />
       </Route>
+      <PrivateRoutes />
     </Switch>
   );
 };

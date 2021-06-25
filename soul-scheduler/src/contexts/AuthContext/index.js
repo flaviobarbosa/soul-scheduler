@@ -14,7 +14,7 @@ export const AuthProvider = ({children}) => {
       id: 1,
     });
 
-    history.push("/");
+    history.push("/appointments");
   };
 
   return <AuthContext.Provider value={{user, signIn}}>{children}</AuthContext.Provider>;
