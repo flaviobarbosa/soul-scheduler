@@ -1,5 +1,6 @@
 import React from "react";
 import {Button, TextField, Typography, makeStyles, Box} from "@material-ui/core";
+import {useAuth} from "../../hooks/useAuth";
 
 const useStyles = makeStyles((theme) => ({
   form: {
@@ -14,8 +15,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Login = () => {
+export const Login = () => {
   const classes = useStyles();
+
+  const {signIn} = useAuth();
 
   return (
     <Box mt={5}>
@@ -37,6 +40,7 @@ const Login = () => {
           size="large"
           fullWidth
           className={classes.button}
+          onClick={signIn}
         >
           entrar
         </Button>
@@ -44,5 +48,3 @@ const Login = () => {
     </Box>
   );
 };
-
-export default Login;
