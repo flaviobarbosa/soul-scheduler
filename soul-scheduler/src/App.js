@@ -1,14 +1,17 @@
-import {Login} from "./pages/Login";
 import {Container} from "@material-ui/core";
+import {Routes} from "./routes";
 import {AuthProvider} from "./contexts/AuthContext";
+import {BrowserRouter} from "react-router-dom";
 
 function App() {
   return (
-    <AuthProvider>
-      <Container>
-        <Login />
-      </Container>
-    </AuthProvider>
+    <BrowserRouter>
+      <AuthProvider>
+        <Container>
+          <Routes />
+        </Container>
+      </AuthProvider>
+    </BrowserRouter>
   );
 }
 
