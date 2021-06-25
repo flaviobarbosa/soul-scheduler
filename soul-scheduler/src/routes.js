@@ -1,5 +1,5 @@
 import {Route, Switch, Redirect} from "react-router-dom";
-import {Appointments} from "./components/Appointments";
+import {Appointments} from "./pages/Appointments";
 import {Panel} from "./components/Panel";
 import {useAuth} from "./hooks/useAuth";
 import {Login} from "./pages/Login";
