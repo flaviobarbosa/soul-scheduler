@@ -1,5 +1,4 @@
 import {RightOutlined} from "@ant-design/icons";
-import {useEffect} from "react";
 import styles from "./styles.module.css";
 
 export const Drawer = ({open, onClose}) => {
