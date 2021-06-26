@@ -1,6 +1,8 @@
+import {Topbar} from "../Topbar";
+
 export const Panel = ({children}) => (
   <>
-    <h1>Panel</h1>
+    <Topbar />
     {children}
   </>
 );
