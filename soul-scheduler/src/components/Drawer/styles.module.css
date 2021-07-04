@@ -83,7 +83,7 @@
 .link {
   color: var(--black);
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .linkIcon {
@@ -119,4 +119,10 @@
   width: 90%;
   height: 1px;
   background-image: linear-gradient(to right, transparent, var(--gray), transparent);
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    display: none;
+  }
 }

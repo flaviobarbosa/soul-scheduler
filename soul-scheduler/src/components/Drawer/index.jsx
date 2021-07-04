@@ -9,7 +9,7 @@ import styles from "./styles.module.css";
 
 export const Drawer = ({open, onClose}) => {
   return (
-    <>
+    <div className={styles.wrapper}>
       {open && <Backdrop />}
       <div className={`${styles.container} ${open ? styles.open : ""}`} onClick={onClose}>
         <div className={styles.drawer}>
@@ -34,7 +34,7 @@ export const Drawer = ({open, onClose}) => {
               <span className={styles.linkIcon}>
                 <CalendarOutlined />
               </span>
-              Meus agendamentos
+              Minha agenda
             </p>
             <p className={styles.link}>
               <span className={styles.linkIcon}>
@@ -45,6 +45,6 @@ export const Drawer = ({open, onClose}) => {
           </nav>
         </div>
       </div>
-    </>
+    </div>
   );
 };
