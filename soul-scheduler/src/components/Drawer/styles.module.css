@@ -16,18 +16,107 @@
   transform: translateX(0);
 }
 
-.sideDrawer {
+.drawer {
   height: 100%;
   background-color: white;
   box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
   position: fixed;
   right: 0;
   top: 0;
-  width: 70%;
+  width: 60%;
   max-width: 400px;
   z-index: 200;
+
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.sideDrawer span {
-  color: black;
+.drawerHeader {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.close,
+.userName {
+  color: var(--black);
+}
+
+.close {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-style: italic;
+}
+
+.useRoom {
+  color: var(--gray);
+  font-size: 0.8rem;
+}
+
+.userName {
+  font-size: 2rem;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  margin-top: 2rem;
+  margin-left: 0.5rem;
+  flex: 1;
+}
+
+.link {
+  color: var(--black);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.linkIcon {
+  margin-right: 1rem;
+}
+
+.active {
+  color: var(--purple);
+}
+.logout {
+  color: var(--gray);
+  font-size: 0.8rem;
+  font-weight: bold;
+  font-style: normal;
+
+  margin-top: 0.5rem;
+
+  display: flex;
+  gap: 0.5rem;
+}
+
+.divider {
+  position: relative;
+  height: 1px;
+}
+
+.transparent:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5%;
+  right: 5%;
+  width: 90%;
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, var(--gray), transparent);
 }
