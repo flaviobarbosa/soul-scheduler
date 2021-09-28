@@ -4,10 +4,15 @@ import {
   CalendarOutlined,
   PlusOutlined,
 } from "@ant-design/icons";
+
+import {useHistory} from "react-router-dom";
+
 import {Backdrop} from "../Backdrop/Backdrop";
 import styles from "./styles.module.css";
 
 export const Drawer = ({open, onClose}) => {
+  let history = useHistory();
+
   return (
     <div className={styles.wrapper}>
       {open && <Backdrop />}
@@ -36,7 +41,7 @@ export const Drawer = ({open, onClose}) => {
               </span>
               Minha agenda
             </p>
-            <p className={styles.link}>
+            <p className={styles.link} onClick={() => history.push("/new")}>
               <span className={styles.linkIcon}>
                 <PlusOutlined />
               </span>

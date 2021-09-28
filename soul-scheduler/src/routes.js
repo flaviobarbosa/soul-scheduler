@@ -3,6 +3,7 @@ import {Appointments} from "./pages/Appointments";
 import {Panel} from "./components/Panel";
 import {useAuth} from "./hooks/useAuth";
 import {Login} from "./pages/Login";
+import {Schedule} from "./pages/Schedule";
 
 const PrivateRoute = ({component: Component, user, ...rest}) => (
   <Route
@@ -26,6 +27,7 @@ const PrivateRoutes = () => {
     <Panel>
       <PrivateRoute path="/" exact component={Home} user={user} />
       <PrivateRoute path="/appointments" component={Appointments} user={user} />
+      <PrivateRoute path="/new" component={Schedule} user={user} />
     </Panel>
   );
 };

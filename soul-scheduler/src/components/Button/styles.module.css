@@ -17,3 +17,8 @@
 .button:hover {
   filter: brightness(80%);
 }
+
+.disabled {
+  background: var(--gray);
+  color: var(-danger);
+}
